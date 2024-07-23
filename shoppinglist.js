@@ -4,7 +4,7 @@ const shoppingList=[];
 const inputBox=document.getElementById("input-box");
 //this enables functionality in the list container
 const  listContainer=document.getElementById("list-container");
-//this adds functionality to the clear list button
+//this adds functionalit\u00dy to the clear list button
 const b3=document.getElementById('b3')
 //add function to the add button
 function addTask(){
@@ -19,7 +19,7 @@ li.innerHTML=inputBox.value;
 listContainer.appendChild(li);
 //the u00d7 is an X sign that removes items from the list
 let span = document.createElement("span")
-span.innerHTML = "\u00d7";
+span.innerHTML = "Mark Purchased";
 li.appendChild(span);
 }
 inputBox.value="";
@@ -36,7 +36,10 @@ else if(e.target.tagName === "SPAN"){
 },false)
 //this function will clear all the items on the list using the clear list button
 function clearList(){
-iflistContainer.length=0;
+if (listContainer.length=0);
 renderList();
 }
 b3.addEventListener('click',clearList);
+b3.addEventListener('click',function(){
+    li.style.textDecoration='line-through';
+})
